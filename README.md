@@ -10,3 +10,6 @@ Included are the hashcat rules I used to generate the list. Hashcat will add two
 
 To regenerate the list, in the `files` directory:
 * `hashcat -r luc.rule -r year.rule --stdout words.txt -o fuzzcoupons.txt`
+
+You should also add bare years (like `1980` or `2007`) with this simple `seq`:
+* `seq 1900 2100 >> fuzzcoupons.txt`
